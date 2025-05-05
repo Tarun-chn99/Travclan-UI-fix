@@ -1,0 +1,469 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Sans-serif;
+}
+
+:root {
+    --primary-color: #384E89;
+    --highlight-color: #FBAC23;
+    --hover-bg: #b8bbc5 ;
+  }
+
+html{
+    font-size: 16px;
+}
+
+.app-wrapper{
+    width: 100%;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.navBar-container{
+    padding: 0rem 7rem;
+    background-color: var(--primary-color);
+    position: relative;
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    font-size: .85rem;
+    justify-content: space-between;
+}
+
+
+.navLinks-container{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navLink-item{
+    display: inline-block;
+    margin-right: 1.5rem;
+    position: relative;
+    background-color: transparent;
+}
+
+.navLink-item__anchor {
+    color: #ffffff;
+    padding: 1rem;
+    background-color: transparent;
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    letter-spacing: 1px;
+}
+
+.navLink-item > a:hover {
+    color: rgb(223, 166, 62);
+}
+
+
+.dropdown-container{
+    position: absolute;
+    overflow: hidden;
+    width: 14rem;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    padding: 0%;
+    margin: 0%;
+    list-style-type: none;
+    z-index: 1;
+    transition: opacity 0.5s ease,visibility 0.2s ease;
+}
+
+.navLink-item:hover .dropdown-container{
+    visibility: visible;
+    opacity: 1;    
+}
+
+.dropdown-container > li > a{
+    display: block;
+    text-decoration: none;
+    padding: 1.25rem 1.5rem 1.25rem 1.5rem;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.dropdown-container a:hover{
+    background-color: var(--hover-bg);
+}
+
+.login-btn{
+    padding: 0.75rem 1.5rem;
+    color: white;
+    background-color: var(--highlight-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 1.25rem;
+}
+
+.menu-toggle-btn{
+    margin-left: 1rem;
+    cursor: pointer;
+    display: none;
+    outline: none;
+    width: 2rem;
+    padding: 0.5rem 0.5rem;
+}
+
+.menu-toggle-container{
+    width: 100%;
+    margin: 0%;
+    position: absolute;
+    left: 0%;
+    top: 100%;    
+    right: 0%;
+    padding: 0%;
+    z-index: 5;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+.menu-active{
+    max-height: 800px !important;
+}
+
+.menu-toggle-container > li {
+    list-style-type: none;
+}
+
+.menu-toggle-container > li > a {
+    display: block;
+    color:var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.menu-toggle-container > li > a:hover{
+    background-color: var(--hover-bg);
+}
+
+.menu-toggle-container__dropdown-container{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0%;
+    border-top: 0px solid orange;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.dropdown-active{
+    overflow: hidden;
+    max-height: 600px !important;
+    border-top: 2px solid orange;
+}
+
+.menu-toggle-container__dropdown-container >li > a{
+    display: block;
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 1rem 2.5rem;
+
+}
+
+.menu-toggle-container__dropdown-container >li > a:hover{
+    background-color: var(--hover-bg);
+}
+
+.body-container{
+    background-color: var(--primary-color);
+    height: 32rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.homepage-container{
+    position: relative;
+    padding: 2rem 7rem 0rem;
+    margin: auto;
+    display: flex;
+    justify-content:space-around;
+    width: 85rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+.homepage-container__left{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin-right: 0rem;
+}
+
+.homepage-container__left > ul{
+  padding: 2rem 0rem 0rem;
+}
+
+.homepage-container__left > ul > li {
+    color: white;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+    list-style-type: none;
+}
+
+.homepage-container__left > ul > li > b{
+    color: var(--highlight-color);
+}
+
+.create-account-btn{
+    display: inline-block;
+    margin-top: 4rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 1.25rem;
+    background-color: var(--highlight-color);
+    color: white;
+    width: max-content;
+    border:none;
+    outline: none;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.download-btn{
+    display: none;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 1.25rem;
+    background-color: white;
+    color: var(--primary-color);
+    width: max-content;
+    border:none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.homepage-container__right{
+    width: 35%;
+    /* margin-left: 2rem; */
+}
+
+.point{
+    padding: 0.5rem;
+    display:inline-block;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.homepage-container--background-image{
+    position: absolute;
+    right: 6.5rem;
+    left: 50%;
+    bottom: -24rem;
+    text-align: right;
+    z-index: 2;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 600px){
+    
+    .navBar-container{
+        padding: 0rem 1.25rem;
+        height: 5rem;
+    }
+
+    .navLink-item{
+        display: none;
+    }
+
+    .menu-toggle-btn{
+        display: block;
+        margin-left: 0.5rem;
+    }
+
+    .body-container{
+        height: 28rem;
+    }
+
+    .homepage-container{
+        padding: 3rem 0rem 0rem;
+        margin: auto;
+        width: 75%;
+    }
+
+    .homepage-container__right{
+        display: none;
+    }
+
+    .homepage-container__left{
+        width: 100%;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .homepage-container__left--image{
+        width: 100%;
+        height: 8.5rem;
+    }
+
+    .homepage-container__left > ul > li {
+        font-size: 0.7rem;
+        text-align: left;
+    }
+
+    .homepage-container__left > ul{
+        padding: 2rem 0rem 0rem;
+        line-height: 1rem;
+      }
+
+    .create-account-btn{
+        margin-top: 2rem
+      }
+      
+
+    .point{
+        padding: 0.25rem;
+    }
+
+    .download-btn{
+        display: inline-block;
+        margin-bottom: 1.5rem;
+    }
+    
+    .homepage-container--background-image{
+        left: 0rem;
+        right: 0rem;
+        bottom: -14.5rem;
+        text-align: center;
+    }
+
+    .earth-background-image{
+        width: 100%;
+        height: 20rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+    /* Styles for devices between 600px and 1024px wide */
+
+    .navBar-container{
+        padding: 0rem 2.5rem;
+        height: 5rem;
+    }
+
+    .navLink-item{
+        display: none;
+    }
+
+    .menu-toggle-btn{
+        display: block;
+        margin-left: 0.5rem;
+    }
+
+    .body-container{
+        height: 30rem;
+    }
+    
+    .homepage-container{
+        padding: 3rem 0rem 0rem;
+        width: 50rem;
+        display: block;
+    }
+
+    .homepage-container__right{
+        display: none;
+    }
+
+    .homepage-container__left{
+        width: 50%;
+        margin-top: 1rem;
+        text-align: center;
+        margin: auto;
+    }
+
+    .homepage-container__left--image{
+        width: 25rem;
+        height: 10rem;
+    }
+
+    .homepage-container__left > ul > li {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .homepage-container__left > ul{
+        padding-top: 2rem;
+      }
+
+    .create-account-btn{
+        margin-top: 2rem
+      }
+      
+    .download-btn{
+        display: inline-block
+    }
+
+    .point{
+        padding: 0.25rem;
+    }
+    
+    .homepage-container--background-image{
+        left: 0rem;
+        right: 0rem;
+        bottom: -32rem;
+        text-align: center;
+    }
+
+    .earth-background-image{
+        width: 35rem;
+        height: 40rem;
+    }
+
+
+}
+  
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+    /* Styles for devices between 1024px and 1440px wide */
+
+    .navBar-container{
+        padding: 3rem 2.5rem;
+        height: 5rem;
+    }
+
+    .body-container{
+        height: 32rem;
+    }
+    
+    .homepage-container{
+        padding: 3rem 0rem 0rem;
+        width: 60rem;
+    }
+
+    .homepage-container--background-image{
+        left: 50%;
+        right: 0rem;
+        bottom: -22rem;
+        text-align: right;
+    }
+
+    .earth-background-image{
+        width: 35rem;
+        height: 40rem;
+    }
+} 
