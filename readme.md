@@ -2,22 +2,22 @@
 
 Issue :
 
-When website is viewed on tablet sized screen or when zoomed in on laptop UI breaks
-The horizontal bar comes at the bottom
-The navigation bar links spread to two rows
-The login button nearly overlaps the TravClan’s logo
+- When website is viewed on tablet sized screen or when zoomed in on laptop UI breaks
+- The horizontal bar comes at the bottom
+- The navigation bar links spread to two rows
+- The login button nearly overlaps the TravClan’s logo
 
 Impact on business :
 
-The impact of such issue is
-Weaks the customer trust 
-Bad UI experience
+- The impact of such issue is
+- Weaks the customer trust 
+- Bad UI experience
 
 Solution
 
-Website is enhanced for great UX among all devices using 
-Proper width and flexbox
-Media query
+- Website is enhanced for great UX among all devices using 
+- Proper width and flexbox
+- Media query
 
 Tech Used - HTML, CSS, JavaScript, React.js
 
