@@ -19,7 +19,7 @@ Solution
 Tech Used - HTML, CSS, JavaScript, React.js
 
 
-Links of Enhancement
+# Enhancement Links
 
 Screen Recording link (before and after UI fix) : https://drive.google.com/file/d1tVNG23PsA4tpWagfVDemKiKC7EnX79Pu/view?usp=drive_link
 
